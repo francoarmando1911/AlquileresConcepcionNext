@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 
-
 export const metadata: Metadata = {
-  title: "Alquileres Concepcion del Uruguay",
-  description: "Alquileres Concepcion del Uruguay",
+  title: "Alquileres Concepción del Uruguay",
+  description: "Alquileres turísticos en Concepción del Uruguay",
   icons: {
-    icon: "/FitTrack.png",
-    apple: "/FitTrack.png",
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
 
@@ -17,28 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
-        <title>{String(metadata.title)}</title>
-        <meta name="description" content={String(metadata.description)} />
-        <link
-          rel="icon"
-          href={
-            typeof metadata.icons === "string"
-              ? metadata.icons
-              : Array.isArray(metadata.icons)
-                ? metadata.icons[0]?.toString() || "/default-icon.png"
-                : metadata.icons && typeof metadata.icons === "object" && "icon" in metadata.icons
-                  ? String(metadata.icons.icon)
-                  : "/default-icon.png"
-          }
-          className="bg-red-600"
-        />
-
+        <title>{metadata.title as string}</title>
+        <meta name="description" content={metadata.description as string} />
+        <meta name="theme-color" content="#5E8CAB" />
+        <link rel="icon" href="/images/logo.png" />
+        <link rel="apple-touch-icon" href="/images/logo.png" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
