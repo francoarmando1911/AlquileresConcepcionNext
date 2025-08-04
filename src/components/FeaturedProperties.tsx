@@ -3,7 +3,8 @@
 import { useRouter } from "next/navigation";
 import { properties } from "@/data/properties";
 import { Bed, Bath, Star } from "lucide-react";
-import Link from "next/link";
+import Header from "./Header";
+
 
 export default function FeaturedProperties() {
     const router = useRouter();
@@ -13,9 +14,11 @@ export default function FeaturedProperties() {
     };
 
     return (
-        <section className="py-12 bg-gray-50">
+        <>
+        <Header/>
+        <section className="py-12 bg-slate-200">
             <div className="container mx-auto px-4">
-                <h2 className="text-2xl font-bold text-center mb-8">Propiedades destacadas</h2>
+                <h2 className="text-2xl font-bold text-center mb-8 text-black">Propiedades destacadas</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                     {properties.map((property) => (
                         <div
@@ -29,24 +32,28 @@ export default function FeaturedProperties() {
                                 className="w-full h-56 object-cover"
                             />
                             <div className="p-4">
-                                <h3 className="text-lg font-semibold">{property.title}</h3>
-                                <p className="text-sm text-gray-600">{property.location}</p>
+                                <h3 className="text-lg font-semibold text-black">{property.title}</h3>
+                                <p className="text-sm text-gray-600">📍{property.location}</p>
                                 <div className="flex items-center gap-4 mt-2 text-gray-500 text-sm">
                                     <div className="flex items-center gap-1"><Bed size={16} /> {property.bedrooms}</div>
                                     <div className="flex items-center gap-1"><Bath size={16} /> {property.bathrooms}</div>
                                     <div className="flex items-center gap-1 text-yellow-500"><Star size={16} fill="currentColor" /> {property.rating}</div>
                                 </div>
-                                <p className="text-blue-600 font-bold mt-2">${property.price}</p>
+                                <p className="text-blue-950 font-bold mt-2">${property.price} / noche</p>
                             </div>
-                            <Link href={`/selectHousePage?id=${property.id}`}>
-                                <button className="bg-blue-500 text-white px-4 py-2 rounded mt-2">
+                            <div className="flex justify-center pb-5">
+                                <button
+                                    className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                    onClick={() => handleClick(property.id)}
+                                >
                                     Ver más
                                 </button>
-                            </Link>
+                            </div>
                         </div>
                     ))}
                 </div>
             </div>
         </section>
+        </>
     );
 }
