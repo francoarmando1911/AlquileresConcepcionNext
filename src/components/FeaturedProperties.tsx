@@ -1,74 +1,59 @@
-import { Bed, Bath, Star } from 'lucide-react';
+"use client";
 
-const properties = [
-    {
-        id: 1,
-        title: 'Moderno departamento en el centro',
-        location: 'Centro, Concepción del Uruguay',
-        price: '25,000',
-        bedrooms: 2,
-        bathrooms: 1,
-        rating: 4.9,
-        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    {
-        id: 2,
-        title: 'Casa con pileta y jardín',
-        location: 'Barrio Residencial',
-        price: '45,000',
-        bedrooms: 3,
-        bathrooms: 2,
-        rating: 4.8,
-        image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-    {
-        id: 3,
-        title: 'Loft acogedor cerca del río',
-        location: 'Costanera',
-        price: '20,000',
-        bedrooms: 1,
-        bathrooms: 1,
-        rating: 5.0,
-        image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    },
-];
+import { useRouter } from "next/navigation";
+import { properties } from "@/data/properties";
+import { Bed, Bath, Star } from "lucide-react";
+import Header from "./Header";
+
 
 export default function FeaturedProperties() {
+    const router = useRouter();
+
+    const handleClick = (id: number) => {
+        router.push(`/selectHousePage?id=${id}`);
+    };
+
     return (
-        <section className="py-12 bg-gray-50">
+        <>
+        <Header/>
+        <section className="py-12 bg-slate-200">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Propiedades Destacadas</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <h2 className="text-2xl font-bold text-center mb-8 text-black">Propiedades destacadas</h2>
+                <div className="grid md:grid-cols-3 gap-6">
                     {properties.map((property) => (
-                        <div key={property.id} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                            <img src={property.image} alt={property.title} className="w-full h-56 object-cover" />
-                            <div className="p-6">
-                                <div className="flex justify-between items-start">
-                                    <h3 className="text-xl font-semibold text-gray-800 mb-2">{property.title}</h3>
-                                    <div className="flex items-center gap-1 text-yellow-500">
-                                        <Star size={18} fill="currentColor" />
-                                        <span className="font-bold">{property.rating}</span>
-                                    </div>
+                        <div
+                            key={property.id}
+                            onClick={() => handleClick(property.id)}
+                            className="cursor-pointer bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow"
+                        >
+                            <img
+                                src={property.image}
+                                alt={property.title}
+                                className="w-full h-56 object-cover"
+                            />
+                            <div className="p-4">
+                                <h3 className="text-lg font-semibold text-black">{property.title}</h3>
+                                <p className="text-sm text-gray-600">📍{property.location}</p>
+                                <div className="flex items-center gap-4 mt-2 text-gray-500 text-sm">
+                                    <div className="flex items-center gap-1"><Bed size={16} /> {property.bedrooms}</div>
+                                    <div className="flex items-center gap-1"><Bath size={16} /> {property.bathrooms}</div>
+                                    <div className="flex items-center gap-1 text-yellow-500"><Star size={16} fill="currentColor" /> {property.rating}</div>
                                 </div>
-                                <p className="text-gray-600 mb-4">{property.location}</p>
-                                <div className="flex items-center gap-6 text-gray-700 mb-4">
-                                    <div className="flex items-center gap-2">
-                                        <Bed size={20} />
-                                        <span>{property.bedrooms} hab.</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <Bath size={20} />
-                                        <span>{property.bathrooms} baño/s</span>
-                                    </div>
-                                </div>
-                                <div className="text-2xl font-bold text-blue-600">
-                                    ${property.price} <span className="text-base font-normal text-gray-500">/ mes</span>
-                                </div>
+                                <p className="text-blue-950 font-bold mt-2">${property.price} / noche</p>
+                            </div>
+                            <div className="flex justify-center pb-5">
+                                <button
+                                    className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                    onClick={() => handleClick(property.id)}
+                                >
+                                    Ver más
+                                </button>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
         </section>
+        </>
     );
 }
