@@ -4,6 +4,8 @@ import { useSearchParams } from "next/navigation";
 import { properties } from "@/data/properties";
 import { useEffect, useState } from "react";
 import { Bed, Bath, Star } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
 
 export default function SelectHousePage() {
     const searchParams = useSearchParams();
@@ -19,7 +21,15 @@ export default function SelectHousePage() {
     }, [id]);
 
     if (!property) {
-        return <div className="text-center py-20">Cargando propiedad...</div>;
+        return (
+            <div className="flex items-center space-x-4">
+                <Skeleton className="h-12 w-12 rounded-full" />
+                <div className="space-y-2">
+                    <Skeleton className="h-4 w-[250px]" />
+                    <Skeleton className="h-4 w-[200px]" />
+                </div>
+            </div>
+        );
     }
 
     return (
@@ -33,6 +43,15 @@ export default function SelectHousePage() {
                 <div className="flex items-center gap-2 text-yellow-500"><Star size={20} fill="currentColor" /> {property.rating}</div>
             </div>
             <p className="text-2xl font-bold text-blue-600">${property.price} / noche</p>
+
+            <div className="flex flex-wrap items-center gap-2 md:flex-row">
+                <Button>
+                    <a href="https://wa.me/{{propiedad.codigo_pais}}{{propiedad.telefono_dueno}}?text=Hola,%20estoy%20interesado%20en%20la%20propiedad%20{{propiedad.id}}"
+                        target="_blank">
+                        Contactar al dueño
+                    </a>
+                </Button>
+            </div>
         </div>
     );
 }
