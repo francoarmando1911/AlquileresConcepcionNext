@@ -3,8 +3,6 @@
 import { useRouter } from "next/navigation";
 import { properties } from "@/data/properties";
 import { Bed, Bath, Star } from "lucide-react";
-import Header from "./Header";
-
 
 export default function FeaturedProperties() {
     const router = useRouter();
@@ -15,7 +13,6 @@ export default function FeaturedProperties() {
 
     return (
         <>
-        <Header/>
         <section className="py-12 bg-slate-200">
             <div className="container mx-auto px-4">
                 <h2 className="text-2xl font-bold text-center mb-8 text-black">Propiedades destacadas</h2>
