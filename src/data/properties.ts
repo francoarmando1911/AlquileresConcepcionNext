@@ -9,7 +9,10 @@ export interface Property {
     image: string;
     codigo_pais: string;
     telefono_dueno: string;
+    lat: number;
+    lng: number;
 }
+
 
 export const properties: Property[] = [
     {
@@ -23,6 +26,8 @@ export const properties: Property[] = [
         image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070",
         codigo_pais: "54",
         telefono_dueno: "3446500001",
+        lat: -32.482758,
+        lng: -58.237804
     },
     {
         id: 2,
@@ -35,6 +40,8 @@ export const properties: Property[] = [
         image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1974",
         codigo_pais: "54",
         telefono_dueno: "3446500002",
+        lat: -32.482758,
+        lng: -58.237804
     },
     {
         id: 3,
@@ -47,6 +54,8 @@ export const properties: Property[] = [
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070",
         codigo_pais: "54",
         telefono_dueno: "3446500003",
+        lat: -32.482758,
+        lng: -58.237804
     },
     {
         id: 4,
@@ -59,6 +68,8 @@ export const properties: Property[] = [
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070",
         codigo_pais: "54",
         telefono_dueno: "3446500004",
+        lat: -32.482758,
+        lng: -58.237804
     },
     {
         id: 5,
@@ -71,6 +82,8 @@ export const properties: Property[] = [
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070",
         codigo_pais: "54",
         telefono_dueno: "3446500005",
+        lat: -32.482758,
+        lng: -58.237804
     },
     {
         id: 6,
@@ -83,5 +96,7 @@ export const properties: Property[] = [
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070",
         codigo_pais: "54",
         telefono_dueno: "3446500006",
+        lat: -32.482758,
+        lng: -58.237804
     },
 ];
