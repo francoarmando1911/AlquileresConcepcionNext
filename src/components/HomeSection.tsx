@@ -26,7 +26,13 @@ export default function FeaturedProperties() {
     };
 
     return (
-        <section className="py-12 bg-slate-200">
+        <section className="py-12 bg-slate-200"
+            style={{
+                backgroundImage: "url('/images/imgcdu.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}
+        >
             <div className="container mx-auto px-4">
                 <div className="mb-10">
                     <h2 className="text-2xl font-bold text-center mb-6 text-black">Seleccioná una zona</h2>

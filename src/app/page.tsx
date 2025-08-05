@@ -1,16 +1,14 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+// page.tsx
 import Footer from "@/components/Footer";
-import FeaturedProperties from "@/components/FeaturedProperties";
-
+import Header from "@/components/Header";
+import HomeSection from "@/components/HomeSection"; 
 
 export default function Home() {
   return (
     <div>
       <Header />
       <main>
-        <Hero />
-        <FeaturedProperties/>
+        <HomeSection />
       </main>
       <Footer />
     </div>

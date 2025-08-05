@@ -7,6 +7,8 @@ export interface Property {
     bathrooms: number;
     rating: number;
     image: string;
+    codigo_pais: string;
+    telefono_dueno: string;
 }
 
 export const properties: Property[] = [
@@ -19,6 +21,8 @@ export const properties: Property[] = [
         bathrooms: 1,
         rating: 4.9,
         image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070",
+        codigo_pais: "54",
+        telefono_dueno: "3446500001",
     },
     {
         id: 2,
@@ -29,6 +33,8 @@ export const properties: Property[] = [
         bathrooms: 2,
         rating: 4.8,
         image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1974",
+        codigo_pais: "54",
+        telefono_dueno: "3446500002",
     },
     {
         id: 3,
@@ -39,6 +45,8 @@ export const properties: Property[] = [
         bathrooms: 1,
         rating: 5.0,
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070",
+        codigo_pais: "54",
+        telefono_dueno: "3446500003",
     },
     {
         id: 4,
@@ -49,6 +57,8 @@ export const properties: Property[] = [
         bathrooms: 1,
         rating: 5.0,
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070",
+        codigo_pais: "54",
+        telefono_dueno: "3446500004",
     },
     {
         id: 5,
@@ -59,6 +69,8 @@ export const properties: Property[] = [
         bathrooms: 1,
         rating: 5.0,
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070",
+        codigo_pais: "54",
+        telefono_dueno: "3446500005",
     },
     {
         id: 6,
@@ -69,6 +81,7 @@ export const properties: Property[] = [
         bathrooms: 1,
         rating: 5.0,
         image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2070",
+        codigo_pais: "54",
+        telefono_dueno: "3446500006",
     },
-
 ];
