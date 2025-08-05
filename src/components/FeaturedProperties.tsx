@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { properties } from "@/data/properties";
 import { Bed, Bath, Star } from "lucide-react";
+import Image from "next/image";
 
 export default function FeaturedProperties() {
     const router = useRouter();
@@ -23,10 +24,12 @@ export default function FeaturedProperties() {
                             onClick={() => handleClick(property.id)}
                             className="cursor-pointer bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow"
                         >
-                            <img
+                            <Image
                                 src={property.image}
                                 alt={property.title}
-                                className="w-full h-56 object-cover"
+                                width={800}
+                                height={400}
+                                className="w-full max-h-96 object-cover rounded-lg mb-6"
                             />
                             <div className="p-4">
                                 <h3 className="text-lg font-semibold text-black">{property.title}</h3>

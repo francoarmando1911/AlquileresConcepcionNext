@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { properties } from "@/data/properties";
 import { Bed, Bath, Star } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function FeaturedProperties() {
     const router = useRouter();
@@ -26,7 +27,8 @@ export default function FeaturedProperties() {
     };
 
     return (
-        <section className="py-12 bg-slate-200"
+        <section
+            className="py-12 bg-slate-200"
             style={{
                 backgroundImage: "url('/images/imgcdu.png')",
                 backgroundSize: 'cover',
@@ -34,21 +36,24 @@ export default function FeaturedProperties() {
             }}
         >
             <div className="container mx-auto px-4">
+                {/* ZONAS */}
                 <div className="mb-10">
                     <h2 className="text-2xl font-bold text-center mb-6 text-black">Seleccioná una zona</h2>
-                    <div className="flex flex-wrap justify-center gap-4">
+                    <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
                         {zonas.map((zona) => (
-                            <button
+                            <Button
                                 key={zona}
                                 onClick={() => handleZonaClick(zona)}
-                                className="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+                                className="rounded-full text-sm sm:text-base px-4 py-2"
+                                variant="secondary"
                             >
                                 {zona}
-                            </button>
+                            </Button>
                         ))}
                     </div>
                 </div>
 
+                {/* PROPIEDADES DESTACADAS */}
                 <h2 className="text-2xl font-bold text-center mb-8 text-black">Propiedades destacadas</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                     {properties.map((property) => (
@@ -75,15 +80,15 @@ export default function FeaturedProperties() {
                                 <p className="text-blue-950 font-bold mt-2">${property.price} / noche</p>
                             </div>
                             <div className="flex justify-center pb-5">
-                                <button
-                                    className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                <Button
+                                    className="px-6 py-3"
                                     onClick={(e) => {
                                         e.stopPropagation();
                                         handlePropertyClick(property.id);
                                     }}
                                 >
                                     Ver más
-                                </button>
+                                </Button>
                             </div>
                         </div>
                     ))}

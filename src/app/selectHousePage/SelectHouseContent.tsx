@@ -3,9 +3,13 @@
 import { useSearchParams } from "next/navigation";
 import { properties } from "@/data/properties";
 import { useEffect, useState } from "react";
-import { Bed, Bath, Star, Phone } from "lucide-react";
+import { Bed, Bath, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+
+const MapContainer = dynamic(() => import("@/components/MapComponent"), { ssr: false });
 
 export default function SelectHousePage() {
     const searchParams = useSearchParams();
@@ -29,9 +33,11 @@ export default function SelectHousePage() {
     return (
         <div className="container mx-auto px-4 py-12">
             <h1 className="text-3xl font-bold mb-4">{property.title}</h1>
-            <img
+            <Image
                 src={property.image}
                 alt={property.title}
+                width={800}
+                height={400}
                 className="w-full max-h-96 object-cover rounded-lg mb-6"
             />
             <p className="text-gray-700 mb-2">📍 {property.location}</p>
@@ -53,6 +59,11 @@ export default function SelectHousePage() {
                     </Button>
                 </a>
             </div>
+
+            <h2 className="text-3xl font-bold mb-4 mt-5">Ubicacion</h2>
+            
+            {/* Mapa */}
+            <MapContainer lat={property.lat} lng={property.lng} />
         </div>
     );
 }
