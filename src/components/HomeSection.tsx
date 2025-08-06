@@ -11,11 +11,11 @@ export default function FeaturedProperties() {
 
     const zonas = [
         "Centro",
-        "Costanera",
-        "Barrio Residencial",
-        "San Isidro",
+        "Puerto viejo",
+        "Zona ciervo",
+        "Zona remanso",
         "Villa Las Lomas",
-        "Zona Rural",
+        "Zona Rural/Termas",
     ];
 
     const handleZonaClick = (zona: string) => {
