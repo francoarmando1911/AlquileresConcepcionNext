@@ -8,16 +8,16 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="bg-white shadow-md sticky top-0 z-50">
+        <header className="shadow-md sticky top-0 z-50" style={{ backgroundColor: "#FAF2E5" }}>
             <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
                 <Link href="/">
                     <Image
                         src="/images/logo.png"
                         alt="Alquileres Concepción"
-                        width={180}
-                        height={60}
+                        width={140}
+                        height={100}
                         priority
-                        className="w-auto h-12"
+                        className="w-auto h-24"
                     />
                 </Link>
 
@@ -58,7 +58,7 @@ export default function Header() {
                     <Link href="/alojamientos" className="text-gray-700 hover:text-blue-500">
                         Alojamiento
                     </Link>
-                    <Link href="/contacto" className="text-gray-700 hover:text-blue-500">
+                    <Link href="/contactPage" className="text-gray-700 hover:text-blue-500">
                         Contacto
                     </Link>
                 </nav>
