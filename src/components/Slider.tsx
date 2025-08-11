@@ -7,15 +7,15 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const slides = [
     {
         id: 1,
-        image: "/electricidadSlider.png",
+        image: "/images/cdelu2.png",
     },
     {
         id: 2,
-        image: "/productos/sliderElectrod.png",
+        image: "/images/cdelu1.png",
     },
     {
         id: 3,
-        image: "/productos/sliderGas.png",
+        image: "/images/cdelu3.png",
     },
 ];
 
