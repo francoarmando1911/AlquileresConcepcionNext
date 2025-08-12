@@ -10,12 +10,10 @@ export default function FeaturedProperties() {
     const router = useRouter();
 
     const zonas = [
-        "Centro",
-        "Puerto viejo",
-        "Zona ciervo",
-        "Zona remanso",
-        "Villa Las Lomas",
-        "Zona Rural/Termas",
+        { name: "Centro", url: "/selectPageCentro" },
+        { name: "Puerto viejo", url: "/zonas?zona=Puerto%20viejo" },
+        { name: "Zona ciervo", url: "/zonas?zona=Zona%20ciervo" },
+        { name: "Zona Termas", url: "/zonas?zona=Zona%20Termas" },
     ];
 
     const handleZonaClick = (zona: string) => {
@@ -36,24 +34,23 @@ export default function FeaturedProperties() {
             }}
         >
             <div className="container mx-auto px-4">
-                {/* ZONAS */}
                 <div className="mb-10">
                     <h2 className="text-2xl font-bold text-center mb-6 text-black">Seleccioná una zona</h2>
                     <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
                         {zonas.map((zona) => (
                             <Button
-                                key={zona}
-                                onClick={() => handleZonaClick(zona)}
+                                key={zona.name} 
+                                onClick={() => handleZonaClick(zona.name)} 
                                 className="rounded-full text-sm sm:text-base px-4 py-2"
                                 variant="secondary"
                             >
-                                {zona}
+                                {zona.name}
                             </Button>
                         ))}
+
                     </div>
                 </div>
 
-                {/* PROPIEDADES DESTACADAS */}
                 <h2 className="text-2xl font-bold text-center mb-8 text-black">Propiedades destacadas</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                     {properties.map((property) => (

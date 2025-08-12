@@ -61,8 +61,7 @@ export default function SelectHousePage() {
             </div>
 
             <h2 className="text-3xl font-bold mb-4 mt-5">Ubicacion</h2>
-            
-            {/* Mapa */}
+
             <MapContainer lat={property.lat} lng={property.lng} />
         </div>
     );

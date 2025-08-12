@@ -6,7 +6,6 @@ import React from 'react';
 import { FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export default function ContactPageContent() {
-    // Tus datos de contacto
     const whatsappUrl = `https://wa.me/541112345678?text=Hola,%20estoy%20interesado%20en%20una%20propiedad`;
     const linkedinUrl = `https://www.linkedin.com/in/tuperfil`;
     const instagramUrl = `https://www.instagram.com/tuperfil`;
