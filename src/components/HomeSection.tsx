@@ -10,14 +10,17 @@ export default function FeaturedProperties() {
     const router = useRouter();
 
     const zonas = [
-        { name: "Centro", url: "/selectPageCentro" },
-        { name: "Puerto viejo", url: "/zonas?zona=Puerto%20viejo" },
-        { name: "Zona ciervo", url: "/zonas?zona=Zona%20ciervo" },
-        { name: "Zona Termas", url: "/zonas?zona=Zona%20Termas" },
+        { name: "Centro", page: "/selectPageCentro" },
+        { name: "Puerto viejo", page: "/zonas?zona=Puerto%20viejo" },
+        { name: "Zona ciervo", page: "/zonas?zona=Zona%20ciervo" },
+        { name: "Zona Termas", page: "/zonas?zona=Zona%20Termas" },
     ];
 
     const handleZonaClick = (zona: string) => {
-        router.push(`/zonas?zona=${encodeURIComponent(zona)}`);
+        const zonaObj = zonas.find(z => z.name === zona);
+        if (zonaObj && zonaObj.page) {
+            router.push(zonaObj.page);
+        }
     };
 
     const handlePropertyClick = (id: number) => {
@@ -27,11 +30,7 @@ export default function FeaturedProperties() {
     return (
         <section
             className="py-12 bg-slate-200"
-            style={{
-                backgroundImage: "url('/images/imgcdu.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-            }}
+            
         >
             <div className="container mx-auto px-4">
                 <div className="mb-10">
