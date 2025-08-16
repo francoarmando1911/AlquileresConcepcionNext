@@ -5,10 +5,12 @@ import Footer from '@/components/Footer'
 
 export default function Page() {
     return (
-        <>
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <ContactPageContent />
-            <Footer/>
-        </>
+            <main className="flex-grow">
+                <ContactPageContent />
+            </main>
+            <Footer />
+        </div>
     )
 }
