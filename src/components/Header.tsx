@@ -72,7 +72,7 @@ export default function Header() {
                     <Link href="/alojamientos" className="block text-gray-700 hover:text-blue-500">
                         Alojamiento
                     </Link>
-                    <Link href="/contacto" className="block text-gray-700 hover:text-blue-500">
+                    <Link href="/contactPage" className="block text-gray-700 hover:text-blue-500">
                         Contacto
                     </Link>
                 </div>
