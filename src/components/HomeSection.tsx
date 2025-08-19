@@ -11,7 +11,7 @@ export default function FeaturedProperties() {
 
     const zonas = [
         { name: "Centro", page: "/selectPageCentro" },
-        { name: "Puerto viejo", page: "/zonas?zona=Puerto%20viejo" },
+        { name: "Puerto viejo", page: "/selectPagePuertoViejo" },
         { name: "Zona ciervo", page: "/zonas?zona=Zona%20ciervo" },
         { name: "Zona Termas", page: "/zonas?zona=Zona%20Termas" },
     ];
