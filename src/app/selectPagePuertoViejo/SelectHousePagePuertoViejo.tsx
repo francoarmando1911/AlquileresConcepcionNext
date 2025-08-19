@@ -1,12 +1,12 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { propertiesCentro } from "@/data/propertiesCentro";
+import { propertiesPuertoViejo } from "@/data/propertiesPuertoViejo";
 import { Bed, Bath, Star } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-export default function PropertiesCentro() {
+export default function PropertiesPuertoViejo() {
     const router = useRouter();
 
     const handlePropertyClick = (id: number) => {
@@ -17,11 +17,11 @@ export default function PropertiesCentro() {
         <section className="py-12 bg-slate-200">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-12 text-blue-800">
-                    Zona Centro
+                    Puerto viejo
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-6">
-                    {propertiesCentro.map((property) => (
+                    {propertiesPuertoViejo.map((property) => (
                         <div
                             key={property.id}
                             className="cursor-pointer bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow"
@@ -32,7 +32,8 @@ export default function PropertiesCentro() {
                                 width={600}
                                 height={300}
                                 className="w-full h-56 object-cover"
-                                priority={property.id <= 3} 
+                                priority={property.id <= 3}
+                                
                             />
                             <div className="p-4">
                                 <h3 className="text-lg font-semibold text-black">{property.title}</h3>
