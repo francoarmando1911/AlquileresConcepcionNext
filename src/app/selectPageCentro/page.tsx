@@ -1,12 +1,16 @@
 import Header from '@/components/Header'
 import React from 'react'
 import PropertiesCentro from './SelectHousePageCentro'
+import Footer from '@/components/Footer'
 
 export default function page() {
   return (
-    <>
-    <Header/>
-    <PropertiesCentro/>
-    </>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow">
+        <PropertiesCentro />
+      </main>
+      <Footer />
+    </div>
   )
 }
