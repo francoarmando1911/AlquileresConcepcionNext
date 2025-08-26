@@ -10,20 +10,6 @@ import Destinos from "./Destinos";
 export default function FeaturedProperties() {
     const router = useRouter();
 
-    const zonas = [
-        { name: "Centro", page: "/selectPageCentro" },
-        { name: "Puerto viejo", page: "/selectPagePuertoViejo" },
-        { name: "Zona ciervo", page: "/selectPageCiervo" },
-        { name: "Zona Termas", page: "/selectPageTermas" },
-    ];
-
-    const handleZonaClick = (zona: string) => {
-        const zonaObj = zonas.find(z => z.name === zona);
-        if (zonaObj && zonaObj.page) {
-            router.push(zonaObj.page);
-        }
-    };
-
     const handlePropertyClick = (id: number) => {
         router.push(`/selectHousePage?id=${id}`);
     };
@@ -31,29 +17,12 @@ export default function FeaturedProperties() {
     return (
         <>
             <Destinos />
-            <section
-                className="py-12 bg-slate-200"
-
-            >
+            <section className="py-12 bg-slate-200">
                 <div className="container mx-auto px-4">
-                    <div className="mb-10">
-                        <h2 className="text-2xl font-bold text-center mb-6 text-black">Seleccioná una zona</h2>
-                        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                            {zonas.map((zona) => (
-                                <Button
-                                    key={zona.name}
-                                    onClick={() => handleZonaClick(zona.name)}
-                                    className="rounded-full text-sm sm:text-base px-4 py-2"
-                                    variant="secondary"
-                                >
-                                    {zona.name}
-                                </Button>
-                            ))}
+                    <h2 className="text-2xl font-bold text-center mb-8 text-black">
+                        Propiedades destacadas
+                    </h2>
 
-                        </div>
-                    </div>
-
-                    <h2 className="text-2xl font-bold text-center mb-8 text-black">Propiedades destacadas</h2>
                     <div className="grid md:grid-cols-3 gap-6">
                         {properties.map((property) => (
                             <div
@@ -72,11 +41,19 @@ export default function FeaturedProperties() {
                                     <h3 className="text-lg font-semibold text-black">{property.title}</h3>
                                     <p className="text-sm text-gray-600">📍{property.location}</p>
                                     <div className="flex items-center gap-4 mt-2 text-gray-500 text-sm">
-                                        <div className="flex items-center gap-1"><Bed size={16} /> {property.bedrooms}</div>
-                                        <div className="flex items-center gap-1"><Bath size={16} /> {property.bathrooms}</div>
-                                        <div className="flex items-center gap-1 text-yellow-500"><Star size={16} fill="currentColor" /> {property.rating}</div>
+                                        <div className="flex items-center gap-1">
+                                            <Bed size={16} /> {property.bedrooms}
+                                        </div>
+                                        <div className="flex items-center gap-1">
+                                            <Bath size={16} /> {property.bathrooms}
+                                        </div>
+                                        <div className="flex items-center gap-1 text-yellow-500">
+                                            <Star size={16} fill="currentColor" /> {property.rating}
+                                        </div>
                                     </div>
-                                    <p className="text-blue-950 font-bold mt-2">${property.price} / noche</p>
+                                    <p className="text-blue-950 font-bold mt-2">
+                                        ${property.price} / noche
+                                    </p>
                                 </div>
                                 <div className="flex justify-center pb-5">
                                     <Button
@@ -95,6 +72,5 @@ export default function FeaturedProperties() {
                 </div>
             </section>
         </>
-        
     );
 }
