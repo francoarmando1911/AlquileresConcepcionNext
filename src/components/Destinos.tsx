@@ -6,48 +6,42 @@ import Link from "next/link";
 
 interface Destino {
     nombre: string;
-    bandera: string;
     imagen: string;
     ruta: string;
 }
 
 const destinos: Destino[] = [
     {
-        nombre: "Buenos Aires",
-        bandera: "🇦🇷",
-        imagen: "/destinos/buenosaires.jpg",
-        ruta: "/destinos/buenos-aires",
+        nombre: "Concepción del Uruguay",
+        imagen: "/images/cdelu2.png",   
+        ruta: "/destinos/concepcion-del-uruguay",
     },
     {
-        nombre: "Mar del Plata",
-        bandera: "🇦🇷",
-        imagen: "/destinos/mardelplata.jpg",
-        ruta: "/destinos/mar-del-plata",
+        nombre: "Gualeguaychú",
+        imagen: "/images/gualeguaychu.png", 
+        ruta: "/destinos/gualeguaychu",
     },
     {
-        nombre: "San Carlos de Bariloche",
-        bandera: "🇦🇷",
-        imagen: "/destinos/bariloche.jpg",
-        ruta: "/destinos/bariloche",
+        nombre: "Concordia",
+        imagen: "/images/concordia.png",    
+        ruta: "/destinos/concordia",
     },
     {
-        nombre: "Córdoba",
-        bandera: "🇦🇷",
-        imagen: "/destinos/cordoba.jpg",
-        ruta: "/destinos/cordoba",
+        nombre: "Federación",
+        imagen: "/images/federacion.png",   
+        ruta: "/destinos/federacion",
     },
     {
-        nombre: "Santiago",
-        bandera: "🇨🇱",
-        imagen: "/destinos/santiago.jpg",
-        ruta: "/destinos/santiago",
+        nombre: "Paraná",
+        imagen: "/images/parana.png",       
+        ruta: "/destinos/parana",
     },
 ];
 
 export default function Destinos() {
     return (
         <section className="px-4 py-8 max-w-6xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Destinos de moda</h2>
+            <h2 className="text-2xl font-bold text-center mb-8 text-black pt-5">Destinos destacados</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {destinos.map((destino, i) => (
                     <Link key={i} href={destino.ruta}>
@@ -68,7 +62,7 @@ export default function Destinos() {
                             />
                             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                 <h3 className="text-white font-semibold text-lg flex items-center gap-2">
-                                    {destino.nombre} <span>{destino.bandera}</span>
+                                    {destino.nombre} 
                                 </h3>
                             </div>
                         </motion.div>
