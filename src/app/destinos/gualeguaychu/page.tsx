@@ -20,6 +20,7 @@ export default function Gualeguaychu() {
                     alt="Concepción del Uruguay"
                     fill
                     className="object-cover"
+                    priority={true} 
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
             </div>

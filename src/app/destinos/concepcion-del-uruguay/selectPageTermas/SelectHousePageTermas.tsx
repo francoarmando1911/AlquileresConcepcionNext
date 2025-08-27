@@ -32,7 +32,7 @@ export default function PropertiesTermas() {
                                 width={600}
                                 height={300}
                                 className="w-full h-56 object-cover"
-                                priority={property.id <= 3}
+                                priority={true} 
 
                             />
                             <div className="p-4">

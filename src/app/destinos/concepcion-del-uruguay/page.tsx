@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const zonas = [
     { nombre: 'Centro', ruta: '/destinos/concepcion-del-uruguay/selectPageCentro' },
     { nombre: 'Puerto Viejo', ruta: '/destinos/concepcion-del-uruguay/selectPagePuertoViejo' },
-    { nombre: 'Zona Ciervo', ruta: '/destinos/concepcio-del-uruguay/selectPageCiervo' },
+    { nombre: 'Zona Ciervo', ruta: '/destinos/concepcion-del-uruguay/selectPageCiervo' },
     { nombre: 'Zona termas', ruta: '/destinos/concepcion-del-uruguay/selectPageTermas' },
 ];
 
@@ -20,6 +20,7 @@ export default function ConcepcionDelUruguay() {
                     alt="Concepción del Uruguay"
                     fill
                     className="object-cover"
+                    priority={true} 
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
             </div>
