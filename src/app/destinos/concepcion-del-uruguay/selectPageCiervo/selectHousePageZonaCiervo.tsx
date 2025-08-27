@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { propertiesCentro } from "@/data/propertiesCentro";
+import { propertiesCentro } from "@/data/concepcion-del-uruguay/propertiesCentro";
 import { Bed, Bath, Star } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";

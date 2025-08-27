@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { propertiesCentro } from "@/data/propertiesCentro";
+import { propertiesCentro } from "@/data/concepcion-del-uruguay/propertiesCentro";
 import { Bed, Bath, Star } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -32,7 +32,7 @@ export default function PropertiesCentro() {
                                 width={600}
                                 height={300}
                                 className="w-full h-56 object-cover"
-                                priority={property.id <= 3} 
+                                priority={property.id <= 3}
                             />
                             <div className="p-4">
                                 <h3 className="text-lg font-semibold text-black">{property.title}</h3>

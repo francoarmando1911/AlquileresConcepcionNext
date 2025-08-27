@@ -1,14 +1,15 @@
 // page.tsx
+import AlojamientosSection from "@/components/AlojamientosSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import FeaturedProperties from "@/components/HomeSection";
 import HomeSection from "@/components/HomeSection"; 
-import Slider from "@/components/Slider";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <Slider/>
+      <AlojamientosSection/>
       <main>
         <HomeSection />
       </main>

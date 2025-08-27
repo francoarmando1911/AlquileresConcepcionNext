@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { propertiesPuertoViejo } from "@/data/propertiesPuertoViejo";
+import { propertiesPuertoViejo } from "@/data/concepcion-del-uruguay/propertiesPuertoViejo";
 import { Bed, Bath, Star } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -33,7 +33,7 @@ export default function PropertiesPuertoViejo() {
                                 height={300}
                                 className="w-full h-56 object-cover"
                                 priority={property.id <= 3}
-                                
+
                             />
                             <div className="p-4">
                                 <h3 className="text-lg font-semibold text-black">{property.title}</h3>
