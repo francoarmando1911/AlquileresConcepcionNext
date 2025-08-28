@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const zonas = [
-    { nombre: 'ZONA n', ruta: '/destinos/' },
+    { nombre: 'Centro', ruta: '/destinos/concordia/centroConcordia' },
     { nombre: 'ZONA s', ruta: '/destinos/' },
     { nombre: 'ZONA e', ruta: '/destinos/' },
     { nombre: 'ZONA o', ruta: '/destinos/' },
