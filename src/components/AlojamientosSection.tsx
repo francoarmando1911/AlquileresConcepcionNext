@@ -21,6 +21,8 @@ export default function AlojamientosSection() {
                     width={1200}
                     height={600}
                     className="object-cover w-full h-[250px] md:h-[400px]"
+                    priority
+                    quality={75}
                 />
             </motion.div>
 

@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -64,19 +65,27 @@ export default function Header() {
                 </nav>
             </div>
 
-            {menuOpen && (
-                <div className="md:hidden px-4 pb-4 space-y-2">
-                    <Link href="/" className="block text-gray-700 hover:text-blue-500">
-                        Inicio
-                    </Link>
-                    <Link href="/alojamientos" className="block text-gray-700 hover:text-blue-500">
-                        Alojamiento
-                    </Link>
-                    <Link href="/contactPage" className="block text-gray-700 hover:text-blue-500">
-                        Contacto
-                    </Link>
-                </div>
-            )}
+            <AnimatePresence>
+                {menuOpen && (
+                    <motion.div
+                        initial={{ scaleY: 0, opacity: 0 }}
+                        animate={{ scaleY: 1, opacity: 1 }}
+                        exit={{ scaleY: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: 'easeInOut' }}
+                        className="md:hidden px-4 pb-4 space-y-2 origin-top"
+                    >
+                        <Link href="/" className="block text-gray-700 hover:text-blue-500">
+                            Inicio
+                        </Link>
+                        <Link href="/destinos" className="block text-gray-700 hover:text-blue-500">
+                            Alojamiento
+                        </Link>
+                        <Link href="/contactPage" className="block text-gray-700 hover:text-blue-500">
+                            Contacto
+                        </Link>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 }
