@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { propertiesPuertoViejo } from "@/data/concepcion-del-uruguay/propertiesPuertoViejo"; //
+import { propertiesZonaTermas } from "@/data/concepcion-del-uruguay/propertiesZonaTermas";
 import { Bed, Bath, Star } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -21,7 +21,7 @@ export default function PropertiesTermas() {
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-6">
-                    {propertiesPuertoViejo.map((property) => (
+                    {propertiesZonaTermas.map((property) => (
                         <div
                             key={property.id}
                             className="cursor-pointer bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow"

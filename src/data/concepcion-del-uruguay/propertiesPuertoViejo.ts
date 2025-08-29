@@ -37,7 +37,7 @@ export const propertiesPuertoViejo: Property[] = [
         bedrooms: 3,
         bathrooms: 2,
         rating: 5.0,
-        image: "https://images.unsplash.com/photo-1600585153439-3c67ca54a5f3?q=80&w=2070",
+        image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2070",
         codigo_pais: "54",
         telefono_dueno: "3446500202",
         lat: -32.481200,
