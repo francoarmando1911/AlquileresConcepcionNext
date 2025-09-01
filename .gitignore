@@ -41,7 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 #project 
-/data
+/data/
 .package-lock.json
 package.json
 next.config.ts
