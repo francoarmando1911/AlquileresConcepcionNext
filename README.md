@@ -1,4 +1,4 @@
-# 🏡 Alquileres Concepción
+# 🏡 Alquileres Turisticos 
 
 **Alquileres Concepción** es una aplicación web para la publicación y gestión de alquileres turísticos en Concepción.  
 El proyecto busca brindar a visitantes y turistas una manera fácil de encontrar alojamiento en distintas zonas de la ciudad (Centro, Puerto Viejo, Termas, Zona Ciervo, entre otros).
