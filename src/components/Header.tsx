@@ -9,17 +9,18 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <header className="shadow-md sticky top-0 z-50" style={{ backgroundColor: "#FAF2E5" }}>
+        <header className="shadow-md sticky top-0 z-50" style={{ backgroundColor: "#fbfbeb" }}>
             <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
                 <Link href="/">
                     <Image
-                        src="/images/logo.png"
+                        src="/images/logo-actualizado.png"
                         alt="Alquileres Concepción"
-                        width={140}
-                        height={100}
+                        width={160}
+                        height={110}
                         priority
-                        className="w-auto h-24"
+                        className="w-auto h-28"
                     />
+
                 </Link>
 
                 <button
