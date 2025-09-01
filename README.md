@@ -1,7 +1,7 @@
 # 🏡 Alquileres Turisticos 
 
-**Alquileres Concepción** es una aplicación web para la publicación y gestión de alquileres turísticos en Concepción.  
-El proyecto busca brindar a visitantes y turistas una manera fácil de encontrar alojamiento en distintas zonas de la ciudad (Centro, Puerto Viejo, Termas, Zona Ciervo, entre otros).
+**Alquileres Concepción** es una aplicación web para la publicación y gestión de alquileres turísticos en Entre Rios.  
+El proyecto busca brindar a visitantes y turistas una manera fácil de encontrar alojamiento en distintas zonas de la ciudad.
 
 ## 🚀 Tecnologías utilizadas
 
@@ -9,11 +9,11 @@ El proyecto busca brindar a visitantes y turistas una manera fácil de encontrar
 - [TypeScript] – Tipado estático para mayor robustez en el código.
 - [Tailwind CSS] – Estilos modernos y responsive.
 - [shadcn/ui] – Componentes UI reutilizables.
-- [Vercel] – Despliegue y hosting (opcional).
+- [Vercel] – Despliegue y hosting.
 
 ## ✨ Características principales
 
-- Catálogo de propiedades divididas por **zonas turísticas**: Centro, Puerto Viejo, Termas, Zona Ciervo.
+- Catálogo de propiedades divididas por **zonas turísticas**.
 - Diseño limpio y responsive para cualquier dispositivo.
 - Imágenes optimizadas con `next/image`.
 - Preparado para SEO y posicionamiento en Google.
