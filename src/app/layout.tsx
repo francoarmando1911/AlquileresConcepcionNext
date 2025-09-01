@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Alquileres Concepción del Uruguay",
-  description: "Alquileres turísticos en Concepción del Uruguay",
+  title: "Alquileres Turisticos Entre Ríos",
+  description: "Alquileres turísticos en Entre Ríos",
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/images/logo-actualizado.png",
+    apple: "/images/logo-actualizado.png",
   },
 };
 
