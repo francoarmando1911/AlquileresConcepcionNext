@@ -1,19 +1,38 @@
+/*
+Representa una propiedad disponible para alquiler en zona Centro de Concepcion del Uruguay
+*/
 export interface Property {
+    /**Identificador de la propiedad */
     id: number;
+    /**Titulo o descripcion de la propiedad */
     title: string;
+    /**Locacion/barrio de la propiedad */
     location: string;
+    /**Precio de alquiler de la propiedad */
     price: string;
+    /**Habitaciones con los que cuenta la propiedad */
     bedrooms: number;
+    /**Baños con los que cuenta la propiedad */
     bathrooms: number;
+    /**Calificacion de la propiedad */
     rating: number;
+    /**Imagen de la propiedad */
     image: string;
+    /**Codigo pais para numero de telefono */
     codigo_pais: string;
+    /**Numero de telefono local de cada propietario */
     telefono_dueno: string;
+    /**Latitud ubicacion para mapa */
     lat: number;
+    /**Longitud ubicacion para mapa */
     lng: number;
+    /**URL opcional para mas informacion de la propiedad */
     url?: string;
 }
 
+/**
+ * Lista de propiedades ubicadas en el centro de Concepcion del Uruguay
+ */
 export const propertiesCentro: Property[] = [
     {
         id: 1,

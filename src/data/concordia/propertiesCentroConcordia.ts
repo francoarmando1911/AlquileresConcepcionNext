@@ -1,24 +1,44 @@
+/**
+ * Representa una propiedad disponible para alquiler.
+ */
 export interface Property {
+    /** Identificador único de la propiedad */
     id: number;
+    /** Título o descripción breve de la propiedad */
     title: string;
+    /** Ubicación de la propiedad (barrio, ciudad) */
     location: string;
+    /** Precio de la propiedad en formato string (ej. "28,000") */
     price: string;
+    /** Cantidad de dormitorios */
     bedrooms: number;
+    /** Cantidad de baños */
     bathrooms: number;
+    /** Calificación de la propiedad (escala 1 a 5) */
     rating: number;
+    /** URL de la imagen principal de la propiedad */
     image: string;
+    /** Código de país del propietario (ej. "54" para Argentina) */
     codigo_pais: string;
+    /** Número de teléfono del dueño */
     telefono_dueno: string;
+    /** Latitud de la ubicación */
     lat: number;
+    /** Longitud de la ubicación */
     lng: number;
+    /** URL opcional para más información o página de la propiedad */
     url?: string;
 }
 
+/**
+ * Lista de propiedades ubicadas en el centro de Concordia.
+ * Cada objeto cumple con la interfaz Property.
+ */
 export const propertiesCentroConcordia: Property[] = [
     {
         id: 1,
         title: "Departamento luminoso con balcón",
-        location: "Centro, Concepción del Uruguay",
+        location: "Centro, Concordia",
         price: "28,000",
         bedrooms: 2,
         bathrooms: 1,
@@ -32,7 +52,7 @@ export const propertiesCentroConcordia: Property[] = [
     {
         id: 2,
         title: "Casa amplia con quincho y garaje",
-        location: "Barrio San Isidro",
+        location: "Centro, Concordia",
         price: "55,000",
         bedrooms: 3,
         bathrooms: 2,
@@ -46,7 +66,7 @@ export const propertiesCentroConcordia: Property[] = [
     {
         id: 3,
         title: "Cabaña rústica en zona tranquila",
-        location: "Barrio La Rural",
+        location: "Centro, Concordia",
         price: "22,000",
         bedrooms: 1,
         bathrooms: 1,
@@ -60,7 +80,7 @@ export const propertiesCentroConcordia: Property[] = [
     {
         id: 4,
         title: "Dúplex moderno con terraza",
-        location: "Barrio 30 de Octubre",
+        location: "Centro, Concordia",
         price: "35,000",
         bedrooms: 2,
         bathrooms: 2,
@@ -74,7 +94,7 @@ export const propertiesCentroConcordia: Property[] = [
     {
         id: 5,
         title: "Departamento económico cerca de la universidad",
-        location: "Zona UNER",
+        location: "Centro, Concordia",
         price: "18,500",
         bedrooms: 1,
         bathrooms: 1,
@@ -88,7 +108,7 @@ export const propertiesCentroConcordia: Property[] = [
     {
         id: 6,
         title: "Casa con pileta y amplio jardín",
-        location: "Barrio Santa Teresita",
+        location: "Centro, Concordia",
         price: "65,000",
         bedrooms: 4,
         bathrooms: 3,

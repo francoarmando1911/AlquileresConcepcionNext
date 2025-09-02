@@ -20,7 +20,6 @@ export default function Header() {
                         priority
                         className="w-auto h-28"
                     />
-
                 </Link>
 
                 <button
