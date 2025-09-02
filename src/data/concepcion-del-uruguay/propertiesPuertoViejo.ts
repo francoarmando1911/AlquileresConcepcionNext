@@ -1,19 +1,36 @@
+/**Representacion de una propiedad disponible para la zona de Puerto Viejo en la ciudad de Concepcion del Uruguay */
+
 export interface Property {
+    /**Identificador de la propiedad */
     id: number;
+    /**Titulo de la propiedad */
     title: string;
+    /**Locacion/zona de la propiedad */
     location: string;
+    /**Precio del alquiler */
     price: string;
+    /**Cantidad de habitaciones */
     bedrooms: number;
+    /**Cantidad de baños */
     bathrooms: number;
+    /**Puntaje de la propiedad */
     rating: number;
+    /**Imagen de la propiedad */
     image: string;
+    /**Codigo de numero telefonico del pais del propietario */
     codigo_pais: string;
+    /**Telefono del propietario */
     telefono_dueno: string;
+    /**Latitud ubicacion */
     lat: number;
+    /**Longitud ubicacion */
     lng: number;
+    /**URL opcional para mas informacion de la propiedad */
     url?: string;
 }
-
+/**
+ * Lista de propiedades ubicadas en la zona de Puerto Viejo, Concepcion del Uruguay
+ */
 export const propertiesPuertoViejo: Property[] = [
     {
         id: 1,

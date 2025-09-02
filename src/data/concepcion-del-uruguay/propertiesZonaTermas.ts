@@ -1,19 +1,35 @@
+/**Representacion de una propiedad disponible en zona termas en Concepcion del Uruguay */
+
 export interface Property {
+    /**Identificador de la propiedad */
     id: number;
+    /**Titulo, descripcion de la propiedad */
     title: string;
+    /**Locacion, barrio de la propiedad */
     location: string;
+    /**Precio de alquiler mensual */
     price: string;
+    /**Cantidad de habitaciones */
     bedrooms: number;
+    /**Cantidad de baños */
     bathrooms: number;
+    /**Rating de la propiedad */
     rating: number;
+    /**Imagen de la propiedad */
     image: string;
+    /**Codigo de numero telefonico especifico del pais del propietario */
     codigo_pais: string;
+    /**Numero de telefono del propietario */
     telefono_dueno: string;
+    /**Latitud ubicacion */
     lat: number;
+    /**Longitud ubicacion */
     lng: number;
+    /**URL opcional para informacion adicional */
     url?: string;
 }
 
+/**Lista de propiedades ubicadas en zona termas Concepcion del Uruguay */
 export const propertiesZonaTermas: Property[] = [
     {
         id: 1,

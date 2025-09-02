@@ -1,19 +1,37 @@
+/**Representacion de una propiedad disponible en la zona Ciervo en la ciudad Concepcion del Uruguay */
+
 export interface Property {
+    /**Identificador de la propiedad */
     id: number;
+    /**Titulo, descripcion de la propiedad */
     title: string;
+    /**Locacion/zona de la propiedad */
     location: string;
+    /**Precio de alquiler */
     price: string;
+    /**Cantidad de habitaciones */
     bedrooms: number;
+    /**Cantidad de baños */
     bathrooms: number;
+    /**Ratin g=de la propiedad */
     rating: number;
+    /**Imagen de la propiedad */
     image: string;
+    /**Codigo de numero telefonico del pais del propietario */
     codigo_pais: string;
+    /**Numero de telefono del propietario */
     telefono_dueno: string;
+    /**Latitud ubicacion */
     lat: number;
+    /**Longitud ubicacion */
     lng: number;
+    /**URL pars informacion adicional (opcional) */
     url?: string;
 }
 
+/**
+ * Lista de propiedades ubicadas en la zona Ciervo, Concepcion del Uruguay
+ */
 export const propertiesZonaCiervo: Property[] = [
     {
         id: 1,
