@@ -5,10 +5,10 @@ import AuthModal from '@/components/auth/AuthModal';
 
 export default function Navbar() {
     const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-    const [user, setUser] = useState<any>(null);
+    const [user, setUser] = useState<{ nombre: string } | null>(null);
 
+    /**Este useEfect verifica si hay usuarios logueados al cargar */
     useEffect(() => {
-        // Verificar si hay usuario logueado al cargar
         const userData = localStorage.getItem('user');
         if (userData) {
             setUser(JSON.parse(userData));
