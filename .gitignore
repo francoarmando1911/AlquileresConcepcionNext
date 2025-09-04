@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -40,8 +41,35 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#project 
+# project specific
 /data/
 .package-lock.json
 package.json
 next.config.ts
+
+# Backend files
+# Archivos de configuración de bases de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+/tmp/
+
+# Carpeta de uploads 
+/uploads/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operativo
+Thumbs.db
