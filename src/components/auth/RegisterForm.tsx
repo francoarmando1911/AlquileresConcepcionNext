@@ -27,11 +27,13 @@ export default function RegisterForm({ onSwitchToLogin, onClose }: RegisterFormP
             const response = await authService.register(formData);
             localStorage.setItem('token', response.token);
             localStorage.setItem('user', JSON.stringify(response.user));
-
+            onClose();
             window.location.reload();
         } catch (err: unknown) {
-            if(err instanceof Error){
+            if (err instanceof Error) {
                 setError(err.message);
+            } else {
+                setError('Error desconocido al registrar usuario');
             }
         } finally {
             setLoading(false);
