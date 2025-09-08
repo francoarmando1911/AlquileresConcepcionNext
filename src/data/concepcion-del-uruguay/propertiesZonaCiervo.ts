@@ -1,120 +1,119 @@
-/**Representacion de una propiedad disponible en la zona Ciervo en la ciudad Concepcion del Uruguay */
+/**Representacion de una propiedad disponible para la zona de Puerto Viejo en la ciudad de Concepcion del Uruguay */
 
 export interface Property {
     /**Identificador de la propiedad */
     id: number;
-    /**Titulo, descripcion de la propiedad */
+    /**Titulo de la propiedad */
     title: string;
     /**Locacion/zona de la propiedad */
     location: string;
-    /**Precio de alquiler */
+    /**Precio del alquiler */
     price: string;
     /**Cantidad de habitaciones */
     bedrooms: number;
     /**Cantidad de baños */
     bathrooms: number;
-    /**Ratin g=de la propiedad */
+    /**Puntaje de la propiedad */
     rating: number;
     /**Imagen de la propiedad */
     image: string;
     /**Codigo de numero telefonico del pais del propietario */
     codigo_pais: string;
-    /**Numero de telefono del propietario */
+    /**Telefono del propietario */
     telefono_dueno: string;
     /**Latitud ubicacion */
     lat: number;
     /**Longitud ubicacion */
     lng: number;
-    /**URL pars informacion adicional (opcional) */
+    /**URL opcional para mas informacion de la propiedad */
     url?: string;
 }
-
 /**
- * Lista de propiedades ubicadas en la zona Ciervo, Concepcion del Uruguay
+ * Lista de propiedades ubicadas en la zona de Puerto Viejo, Concepcion del Uruguay
  */
 export const propertiesZonaCiervo: Property[] = [
     {
         id: 1,
-        title: "Casa de campo con piscina",
-        location: "Zona Ciervo, Concepción del Uruguay",
-        price: "65,000",
-        bedrooms: 3,
-        bathrooms: 2,
-        rating: 4.9,
-        image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2070",
+        title: "Cabaña frente al río",
+        location: "Puerto Viejo, Concepción del Uruguay",
+        price: "30,000",
+        bedrooms: 2,
+        bathrooms: 1,
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=2070",
         codigo_pais: "54",
-        telefono_dueno: "3446500301",
-        lat: -32.495200,
-        lng: -58.230500
+        telefono_dueno: "3446500201",
+        lat: -32.482500,
+        lng: -58.224000
     },
     {
         id: 2,
-        title: "Cabaña rodeada de naturaleza",
-        location: "Zona Ciervo",
-        price: "28,000",
-        bedrooms: 2,
-        bathrooms: 1,
-        rating: 4.7,
-        image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070",
+        title: "Casa con muelle privado",
+        location: "Puerto Viejo",
+        price: "70,000",
+        bedrooms: 3,
+        bathrooms: 2,
+        rating: 5.0,
+        image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2070",
         codigo_pais: "54",
-        telefono_dueno: "3446500302",
-        lat: -32.496800,
-        lng: -58.228700
+        telefono_dueno: "3446500202",
+        lat: -32.481200,
+        lng: -58.226500
     },
     {
         id: 3,
-        title: "Chalet familiar amplio",
-        location: "Zona Ciervo",
-        price: "75,000",
-        bedrooms: 4,
-        bathrooms: 3,
-        rating: 5.0,
-        image: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=2070",
+        title: "Loft moderno con vista al río",
+        location: "Puerto Viejo",
+        price: "40,000",
+        bedrooms: 1,
+        bathrooms: 1,
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1586105251261-72a756497a11?q=80&w=2070",
         codigo_pais: "54",
-        telefono_dueno: "3446500303",
-        lat: -32.494000,
-        lng: -58.232900
+        telefono_dueno: "3446500203",
+        lat: -32.483800,
+        lng: -58.222900
     },
     {
         id: 4,
-        title: "Casa moderna con terraza",
-        location: "Zona Ciervo",
-        price: "55,500",
-        bedrooms: 3,
-        bathrooms: 2,
-        rating: 4.8,
-        image: "https://images.unsplash.com/photo-1599423300746-b62533397364?q=80&w=2070",
+        title: "Bungalow rústico en la costa",
+        location: "Puerto Viejo",
+        price: "25,500",
+        bedrooms: 1,
+        bathrooms: 1,
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2070",
         codigo_pais: "54",
-        telefono_dueno: "3446500304",
-        lat: -32.493300,
-        lng: -58.229800
+        telefono_dueno: "3446500204",
+        lat: -32.484200,
+        lng: -58.225100
     },
     {
         id: 5,
-        title: "Quinta con parque arbolado",
-        location: "Zona Ciervo",
-        price: "82,000",
-        bedrooms: 5,
-        bathrooms: 3,
+        title: "Casa familiar cerca de la playa",
+        location: "Puerto Viejo",
+        price: "55,000",
+        bedrooms: 4,
+        bathrooms: 2,
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070",
+        image: "https://images.unsplash.com/photo-1599423300746-b62533397364?q=80&w=2070",
         codigo_pais: "54",
-        telefono_dueno: "3446500305",
-        lat: -32.497100,
-        lng: -58.231400
+        telefono_dueno: "3446500205",
+        lat: -32.480900,
+        lng: -58.227700
     },
     {
         id: 6,
-        title: "Dúplex estilo rústico",
-        location: "Zona Ciervo",
-        price: "36,000",
+        title: "Departamento minimalista frente al río",
+        location: "Puerto Viejo",
+        price: "32,000",
         bedrooms: 2,
-        bathrooms: 2,
-        rating: 4.6,
-        image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=2070",
+        bathrooms: 1,
+        rating: 4.5,
+        image: "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?q=80&w=2070",
         codigo_pais: "54",
-        telefono_dueno: "3446500306",
-        lat: -32.495800,
-        lng: -58.227900
+        telefono_dueno: "3446500206",
+        lat: -32.482700,
+        lng: -58.223400
     },
 ];

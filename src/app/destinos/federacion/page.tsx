@@ -5,10 +5,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const zonas = [
-    { nombre: 'ZONA n', ruta: '/destinos/' },
-    { nombre: 'ZONA s', ruta: '/destinos/' },
-    { nombre: 'ZONA e', ruta: '/destinos/' },
-    { nombre: 'ZONA o', ruta: '/destinos/' },
+    { nombre: 'Centro', ruta: '/destinos/cfederacion/' },
+    { nombre: 'Puerto Viejo', ruta: '/destinos/federacion/' },
+    { nombre: 'Zona Ciervo', ruta: '/destinos/federacion/' },
+    { nombre: 'Zona termas', ruta: '/destinos/federacion/' },
 ];
 
 export default function Federacion() {
@@ -17,10 +17,10 @@ export default function Federacion() {
             <div className="absolute inset-0">
                 <Image
                     src="/images/federacion2.png"
-                    alt="Federación"
+                    alt="Federacion"
                     fill
                     className="object-cover"
-                    priority={true} 
+                    priority={true}
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
             </div>
@@ -33,7 +33,7 @@ export default function Federacion() {
                     transition={{ duration: 1 }}
                     className="text-white text-4xl sm:text-6xl font-bold mb-8"
                 >
-                    Federación
+                    Federacion
                 </motion.h1>
 
                 <motion.div

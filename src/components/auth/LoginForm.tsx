@@ -25,11 +25,13 @@ export default function LoginForm({ onSwitchToRegister, onClose }: LoginFormProp
             const response = await authService.login(formData);
             localStorage.setItem('token', response.token);
             localStorage.setItem('user', JSON.stringify(response.user));
-
+            onClose();
             window.location.reload();
         } catch (err: unknown) {
-            if(err instanceof Error){
+            if (err instanceof Error) {
                 setError(err.message);
+            } else {
+                setError('Error desconocido al iniciar sesión');
             }
         } finally {
             setLoading(false);

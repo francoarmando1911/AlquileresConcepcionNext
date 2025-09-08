@@ -26,12 +26,10 @@ export default function Navbar() {
         <nav className="bg-white shadow-lg">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
-                    {/* Logo y navegación */}
                     <div className="flex items-center">
                         <span className="text-xl font-bold">AlquileresConcepción</span>
                     </div>
 
-                    {/* Botones de autenticación */}
                     <div className="flex items-center space-x-4">
                         {user ? (
                             <div className="flex items-center space-x-4">

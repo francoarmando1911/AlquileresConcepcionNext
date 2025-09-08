@@ -5,10 +5,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const zonas = [
-    { nombre: 'Centro', ruta: '/destinos/concordia/centroConcordia' },
-    { nombre: 'ZONA s', ruta: '/destinos/' },
-    { nombre: 'ZONA e', ruta: '/destinos/' },
-    { nombre: 'ZONA o', ruta: '/destinos/' },
+    { nombre: 'Centro', ruta: '/destinos/concordia/propertiesCentroConcordia' },
+    { nombre: 'Puerto Viejo', ruta: '/destinos/concordia' },
+    { nombre: 'Zona Ciervo', ruta: '/destinos/concordia/' },
+    { nombre: 'Zona termas', ruta: '/destinos/concordia/' },
 ];
 
 export default function Concordia() {
@@ -20,7 +20,7 @@ export default function Concordia() {
                     alt="Concordia"
                     fill
                     className="object-cover"
-                    priority={true} 
+                    priority={true}
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
             </div>
