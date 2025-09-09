@@ -17,11 +17,19 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="relative">
+        <div className="fixed inset-0 bg-[#F5DFC1] bg-opacity-70 flex items-center justify-center z-50 p-4">
+            <div
+                className="
+                    relative 
+                    w-full max-w-md  
+                    bg-white rounded-2xl shadow-lg 
+                    p-6 sm:p-8 
+                    overflow-y-auto max-h-[90vh]
+                "
+            >
                 <button
                     onClick={onClose}
-                    className="absolute -top-10 -right-10 text-white text-2xl hover:text-gray-300"
+                    className="absolute top-3 right-3 text-black text-2xl hover:text-gray-500"
                 >
                     ×
                 </button>
