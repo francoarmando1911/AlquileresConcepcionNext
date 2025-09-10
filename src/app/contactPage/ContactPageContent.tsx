@@ -1,14 +1,44 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaWhatsapp, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 export default function ContactPageContent() {
     const whatsappUrl = `https://wa.me/541112345678?text=Hola,%20estoy%20interesado%20en%20una%20propiedad`;
-    const linkedinUrl = `https://www.linkedin.com/in/tuperfil`;
-    const instagramUrl = `https://www.instagram.com/tuperfil`;
+    const linkedinUrl = `https://www.linkedin.com/company/intra-argentina`;
+    const instagramUrl = `https://www.instagram.com/intrasoftware__?igsh=MXY0Y2h0cmR3eTdhaw==`;
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.id]: e.target.value,
+        });
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        const { name, email, subject, message } = formData;
+
+        const mailto = `mailto:intrasoftware1911@gmail.com?subject=${encodeURIComponent(
+            subject
+        )}&body=${encodeURIComponent(
+            `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
+        )}`;
+
+        window.location.href = mailto;
+    };
 
     return (
         <div className="container mx-auto px-4 py-12 max-w-2xl">
@@ -39,19 +69,25 @@ export default function ContactPageContent() {
             <div className="space-y-4">
                 <h2 className="text-xl font-semibold">Envíanos un mensaje</h2>
 
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-1">
                                 Nombre
                             </label>
-                            <Input id="name" placeholder="Tu nombre" />
+                            <Input id="name" value={formData.name} onChange={handleChange} placeholder="Tu nombre" />
                         </div>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium mb-1">
                                 Email
                             </label>
-                            <Input id="email" type="email" placeholder="tu@email.com" />
+                            <Input
+                                id="email"
+                                type="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="tu@email.com"
+                            />
                         </div>
                     </div>
 
@@ -59,14 +95,20 @@ export default function ContactPageContent() {
                         <label htmlFor="subject" className="block text-sm font-medium mb-1">
                             Asunto
                         </label>
-                        <Input id="subject" placeholder="¿Cómo podemos ayudarte?" />
+                        <Input id="subject" value={formData.subject} onChange={handleChange} placeholder="¿Cómo podemos ayudarte?" />
                     </div>
 
                     <div>
                         <label htmlFor="message" className="block text-sm font-medium mb-1">
                             Mensaje
                         </label>
-                        <Textarea id="message" rows={4} placeholder="Escribe tu mensaje aquí..." />
+                        <Textarea
+                            id="message"
+                            rows={4}
+                            value={formData.message}
+                            onChange={handleChange}
+                            placeholder="Escribe tu mensaje aquí..."
+                        />
                     </div>
 
                     <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
