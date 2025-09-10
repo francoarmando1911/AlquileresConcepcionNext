@@ -22,12 +22,8 @@ export default function Footer() {
     return (
         <footer className="bg-gray-900 text-white py-10">
             <div className="container mx-auto px-4 flex flex-col gap-8 md:grid md:grid-cols-3">
-                {/* Logo / Branding */}
                 <div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
                     <h2 className="text-xl font-bold mb-2 text-center md:text-left">Alquileres Turisticos Entre Ríos</h2>
-                    <p className="text-gray-400 text-sm text-center md:text-left">
-                        Intra Software
-                    </p>
                 </div>
 
                 <div className="flex flex-col items-center mb-6 md:mb-0">
