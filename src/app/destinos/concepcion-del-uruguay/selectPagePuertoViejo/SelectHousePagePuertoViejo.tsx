@@ -10,7 +10,7 @@ export default function PropertiesPuertoViejo() {
     const router = useRouter();
 
     const handlePropertyClick = (id: number) => {
-        window.open(`/selectHousePage?id=${id}`, '_blank');
+        window.open(`/destinos/concepcion-del-uruguay/selectPagePuertoViejo/selectHouseContent?id=${id}`, '_blank');
     };
 
     return (
