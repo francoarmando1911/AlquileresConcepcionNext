@@ -10,7 +10,7 @@ export default function PropertiesTermas() {
     const router = useRouter();
 
     const handlePropertyClick = (id: number) => {
-        window.open(`/selectHousePage?id=${id}`, '_blank');
+        window.open(`/destinos/concepcion-del-uruguay/selectPageTermas/selectHouseContent?id=${id}`, '_blank');
     };
 
     return (
