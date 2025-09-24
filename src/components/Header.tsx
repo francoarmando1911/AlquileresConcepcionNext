@@ -132,11 +132,11 @@ export default function Header() {
                             Inicio
                         </Link>
                         <Link
-                            href="/destinos"
+                            href="/interestPlaces/selectPage"
                             className="block text-gray-700 hover:text-blue-500 py-2"
                             onClick={() => setMenuOpen(false)}
                         >
-                            Alojamiento
+                            Lugares de interes
                         </Link>
                         <Link
                             href="/contactPage"
