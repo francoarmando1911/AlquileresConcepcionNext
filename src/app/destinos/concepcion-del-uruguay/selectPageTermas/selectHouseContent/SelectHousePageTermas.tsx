@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { propertiesPuertoViejo } from "@/data/concepcion-del-uruguay/propertiesPuertoViejo";
+import { propertiesZonaTermas } from "@/data/concepcion-del-uruguay/propertiesZonaTermas";
 
 const MapContainer = dynamic(() => import("@/components/MapComponent"), { ssr: false });
 
@@ -15,11 +15,11 @@ export default function SelectHouseContent() {
     const searchParams = useSearchParams();
     const id = searchParams.get("id");
 
-    const [property, setProperty] = useState<typeof propertiesPuertoViejo[0] | null>(null);
+    const [property, setProperty] = useState<typeof propertiesZonaTermas[0] | null>(null);
 
     useEffect(() => {
         if (id) {
-            const found = propertiesPuertoViejo.find((p) => p.id === Number(id));
+            const found = propertiesZonaTermas.find((p) => p.id === Number(id));
             setProperty(found || null);
         }
     }, [id]);
