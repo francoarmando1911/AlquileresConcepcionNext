@@ -14,7 +14,7 @@ const destinos: Destino[] = [
     {
         nombre: "Concepción del Uruguay",
         imagen: "/images/cdelu2.png",
-        ruta: "/destinos/concepcion-del-uruguay",
+        ruta: "/interestPlaces/concepcion-del-uruguay",
     },
     {
         nombre: "Gualeguaychú",
